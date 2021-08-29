@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <th:block th:include="~{/fragments/head}"></th:block>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg bg-nav rounded">
+        <th:block th:include="~{/fragments/nav}"></th:block>
+    </nav>
+</header>
+<main>
+    <div th:class="${user}" th:object="${user}" class="container bg-blur rounded mt-5 mb-4">
+
+        <div class="row">
+            <th:block>
+                <div class=" rounded bg-blurForHome1" style=" overflow: auto">
+                    <h3 class="mySticky rounded text-center" th:text="|${user.fullName}&#39s services:|"></h3>
+                    <div th:each="s : ${ActiveServices}" class="mt-3 rounded allUsers">
+                        <span th:value="${s.name}"
+                              th:utext="|Service Name: ${s.name}| + '<br/>' + |Description: ${s.description}| + '<br/>' + |Price: ${s.price}&#036|"></span>
+                    </div>
+                    <h3 class="mt-3Static myStickyCategories rounded text-center"
+                        th:utext="|Total Price: ${totalPrice}&#036|"></h3>
+                    <th:block th:if="${user.getPaymentDate() == null}">
+                        <h3 class="mt-3Static myStickyCategories rounded text-center" th:utext="|Payment Due:|"></h3>
+                    </th:block>
+                    <th:block th:unless="${user.getPaymentDate() == null}">
+                        <h3 class="mt-3Static myStickyCategories rounded text-center"
+                            th:utext="|Payment Due: ${user.getPaymentDate()}|"></h3>
+                    </th:block>
+                    <a class="ml-3UsersNew btnForListing" th:href="@{/users/changerole/(id = ${user.getId()})}">Make
+                        operator</a>
+                </div>
+            </th:block>
+
+
+            <div th:object="${InactiveServices}" class=" bg-blurForHome2 rounded m-auto"
+                 style=" overflow: auto">
+                <h3 class="mySticky rounded">Services</h3>
+                <div class="col-5ServicesCateg rounded m-auto" style=" overflow: auto">
+
+                    <h3 class="myStickyCategories rounded mt-3New">Call Minutes</h3>
+                    <th:block th:each="s : ${InactiveServices}">
+                        <div th:if="${s.getCategory().name().equals('CALL_MINUTES')}"
+                             class="allServices rounded mt-2 text-left">
+                            <span th:utext="|Service Name: ${s.name}| + '<br/>' + |Description: ${s.description}| + '<br/>' + |Price: ${s.price}&#036|"></span>
+                            <a class="ml-3ServicesNew btnForListing" th:href="@{/users/addservice/(id = ${s.getId()})}">Add</a>
+                        </div>
+                    </th:block>
+
+                    <h3 class="myStickyCategories rounded mt-3New">SMS</h3>
+                    <th:block th:each="s : ${InactiveServices}">
+                        <div th:if="${s.getCategory().name().equals('SMS')}" class="allServices rounded mt-2 text-left">
+                            <span th:utext="|Service Name: ${s.name}| + '<br/>' + |Description: ${s.description}| + '<br/>' + |Price: ${s.price}&#036|"></span>
+                            <a class="ml-3ServicesNew btnForListing" th:href="@{/users/addservice/(id = ${s.getId()})}">Add</a>
+                        </div>
+                    </th:block>
+
+
+                    <h3 class="myStickyCategories rounded mt-3New">Internet Megabytes</h3>
+                    <th:block th:each="s : ${InactiveServices}">
+                        <div th:if="${s.getCategory().name().equals('INTERNET_MEGABYTES')}"
+                             class="allServices rounded mt-2 text-left">
+                            <span th:utext="|Service Name: ${s.name}| + '<br/>' + |Description: ${s.description}| + '<br/>' + |Price: ${s.price}&#036|"></span>
+                            <a class="ml-3ServicesNew btnForListing" th:href="@{/users/addservice/(id = ${s.getId()})}">Add</a>
+                        </div>
+                    </th:block>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer bg-transparent  py-2">
+    <th:block th:include="~{/fragments/footer}"></th:block>
+</footer>
+</body>
+</html>

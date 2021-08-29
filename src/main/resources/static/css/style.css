@@ -1,0 +1,236 @@
+.w-15 {
+    width: 15%;
+}
+
+.bg-gray {
+    background-color: #e9ecef;
+}
+
+.bg-nav {
+    background-color: #FD4A02;
+    padding: 3px;
+    /*margin: 30px;*/
+}
+
+
+body {
+    background-image: url(/img/woman.jpg);
+    /*background-position: top;*/
+    background-size:cover, 100px ;
+    background-position: top;
+    background-attachment: fixed;
+    /*background-size: cover;*/
+    margin-bottom: 5rem;
+}
+
+textarea {
+    resize: none;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    color: black;
+    font-weight: bold;
+    background-color: white;
+    text-align: center;
+
+}
+
+.img-thumb {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+}
+
+.bg-blur {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
+    position: relative;
+    right: 0px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #FD4A02;
+    z-index: 2;
+    width: 30%;
+    padding: 80px;
+    text-align: center;
+}
+
+.bg-blurForIndex {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
+    position: relative;
+    right: 463px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #FD4A02;
+    z-index: 2;
+    width: 30%;
+    padding: 80px;
+    text-align: center;
+}
+
+.bg-blurForHome{
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/opacity/see-through */
+    position: relative;
+    left: 90px;
+    top: 20px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #FD4A02;
+    z-index: 2;
+    width: 90%;
+    height: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+.bg-blurForHome1{
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    position: relative;
+    left: 80px;
+    top: 50px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #FD4A02;
+    z-index: 2;
+    width: 40%;
+    height: 573px;
+    padding: 60px;
+    text-align: left;
+}
+
+.bg-blurForHome2{
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    position: relative;
+    left: 230px;
+    top: 50px;
+    color: white;
+    font-weight: bold;
+    border: 3px solid #FD4A02;
+    z-index: 2;
+    width: 40%;
+    height: 573px;
+    padding: 60px;
+    text-align: center;
+}
+
+.allUsers{
+    color: white;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    border: 3px solid #FD4A02;
+}
+
+.allServices{
+    color: white;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    border: 3px solid #FD4A02;
+}
+
+.mySticky {
+    position: sticky;
+    background-color: #FD4A02;
+    color: white;
+    left: 0;
+}
+
+.myStickyCategories {
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+    border: 3px solid #FD4A02;
+    position: sticky;
+    color: #FD4A02;
+    left: 0;
+}
+
+.btnForListing{
+    color:#FD4A02 ;
+}
+
+.btnForSearch{
+    background-color: white;
+    font-weight: bold;
+    color: #FD4A02;
+    padding: 2px;
+    height: 30px;
+    top: 0;
+}
+
+.btnForPay{
+    background-color: #FD4A02;
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    padding: 2px;
+    height: 30px;
+
+    cursor: pointer;
+    right: 60px;
+}
+
+.mt-3New{
+    margin-top: 8px;
+}
+
+.ml-3ServicesNew{
+    position: absolute;
+   right: 25px;
+}
+
+.ml-3UsersNew{
+    position: absolute;
+    right: 70px;
+}
+
+.ml-3UsersNewForPayment{
+    position: absolute;
+    right: 60px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    padding: 5px;
+    /*margin: 10px;*/
+    background-color: #FD4A02;
+}
+
+/*.ml-3UsersNewForPayment{*/
+/*    position: absolute;*/
+/*    right: 60px;*/
+/*    font-size: 15px;*/
+/*    font-weight: bold;*/
+/*    color: #FD4A02;*/
+/*    border: 3px solid #FD4A02;*/
+/*    padding: 5px;*/
+/*    !*margin: 10px;*!*/
+/*    background-color: rgba(0, 0, 0, 0.4); !* Black w/opacity/see-through *!*/
+/*}*/
+
+.mt-3NewForData{
+    position: absolute;
+    left: 10px;
+    margin-top: 1rem !important
+}
+
+.mt-3Static{
+    position: static;
+    left: 10px;
+    margin-top: 1rem !important
+}
+
+.nameOfOperator{
+    color: #FD4A02;
+}
+
+.font{
+    /*font-family: "Arial", Arial, serif;*/
+}
